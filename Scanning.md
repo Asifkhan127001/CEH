@@ -8,7 +8,7 @@
 
  # PING SWEEP 
 
-   Nmap -sC -sV -p- -T4 -V 198.168.43.*
+    Nmap -sC -sV -p- -T4 -V 198.168.43.*
 
 # Full Scanning
 
