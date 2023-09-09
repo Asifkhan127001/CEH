@@ -1,6 +1,6 @@
 # LIVE HOST
 
-        nmap IP/24
+       nmap IP/24
    nmap 192.168.43.0-255
    nmap 192.168.43.*
    nmap 192.168.*.*
