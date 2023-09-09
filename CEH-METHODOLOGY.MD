@@ -6,3 +6,4 @@
 4. Stegano-graphy
 5. Cryptography
 6. Hacking Web Application & Android
+7. AWS
