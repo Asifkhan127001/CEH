@@ -12,9 +12,9 @@
 
 # Full Scanning
 
-   nmap -sC -sV -p- -O -v -A -T4 192.168.43.1/24
-   nmap -sC -sV -p- -O -v -A -T4 192.168.43.*
-   nmap -sC -sV -p- -O -v -A -T4 192.168.*.*
+    nmap -sC -sV -p- -O -v -A -T4 192.168.43.1/24
+    nmap -sC -sV -p- -O -v -A -T4 192.168.43.*
+    nmap -sC -sV -p- -O -v -A -T4 192.168.*.*
    
 
    
