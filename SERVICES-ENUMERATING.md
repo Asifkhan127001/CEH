@@ -59,4 +59,65 @@ SNMP Protocol is used to monitor and manage Network Devices like PCs, Router, Pr
 
          auxiliary/scanner/snmp/snmp_login
 
-4. 
+4. List all the Interfaces of the machine. Use appropriate Nmap Scripts.
+
+         sudo nmap --script=snmp-interfaces IP
+
+## SMB Enumeration - Port 445
+server message Block
+
+Network file sharing Protocol that allows applications on a Computer to red and write to file. 
+
+Request services from server programs in a computer network
+
+## Tools used to Enumerate
+
+1. Nmap
+2. enum4linux
+3. Metasploit
+
+## What to Hack?
+
+1. Network File shares
+2. Logged in Users details
+3. Workgroups
+4. security level information
+5. Domains & Services
+
+## Enumerate
+
+1. Find Information
+
+       sudo nmap -sV -sC -A IP
+
+2. Enumerating Shares
+
+       sudo nmap -p445 --script=smb-enum-shares IP
+
+3. Connect SMB GUI Method
+
+       Open file in Network and search
+       smb://IP/
+
+4. Enumerating users
+
+        sudo nmap --script=smb-enum-users IP
+        sudo nmap --script=smb-enum-users --script-args smbusername=administrator,smbpassword=smbserver_771 IP
+
+5. Enumerating Groups
+
+        sudo nmap --script=smb-enum-groups IP
+        sudo nmap --script=smb-enum-groups--script-args smbusername=administrator,smbpassword=smbserver_771 IP
+
+6. Enumerating Security Level
+
+         sudo nmap -A -sV -sC IP
+   
+8. Enumerating Services 
+
+         sudo nmap --script=smb-enum-services IP
+         sudo nmap --script=smb-enum-services --script-args smbusername=administrator,smbpassword=smbserver_771 IP
+
+9. Enumerating all information
+
+          enum4linux IP
