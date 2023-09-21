@@ -43,6 +43,7 @@ SNMP Protocol is used to monitor and manage Network Devices like PCs, Router, Pr
 4. List valid community strings of the server by using snmp_login metasploit module.
 5. List all the Interfaces of the machine. Use appropriate Nmap Scripts.
 
+## Enumeration
 
 1. Scanning and Find Information
 
