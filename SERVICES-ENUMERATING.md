@@ -25,7 +25,7 @@ FTP (File Transfer Protocol) is a network protocol for transmitting file between
 
        get flag.txt
 
-# SNMP Enumeration - Port 139-445
+# SNMP Enumeration - Port 161
 
 SNMP Protocol is used to monitor and manage Network Devices like PCs, Router, Printer, Switches, Servers, Etc...
 
@@ -47,5 +47,15 @@ SNMP Protocol is used to monitor and manage Network Devices like PCs, Router, Pr
 1. Scanning and Find Information
 
        nmap -SU IP
-       nmap -p -A -sV -sC IP
+       nmap -p 161 -A -sV -sC IP
        snmp-check IP
+
+2. Finding Running Processes Using Nmap Script
+
+        sudo nmap -SU -p161 --script=snmp-processes IP
+
+3. Find Valid Strings Using Metasploit
+
+         auxiliary/scanner/snmp/snmp_login
+
+4. 
