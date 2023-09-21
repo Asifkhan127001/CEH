@@ -74,7 +74,6 @@ Request services from server programs in a computer network
 
 1. Nmap
 2. enum4linux
-3. Metasploit
 
 ## What to Hack?
 
@@ -113,11 +112,32 @@ Request services from server programs in a computer network
 
          sudo nmap -A -sV -sC IP
    
-8. Enumerating Services 
+7. Enumerating Services 
 
          sudo nmap --script=smb-enum-services IP
          sudo nmap --script=smb-enum-services --script-args smbusername=administrator,smbpassword=smbserver_771 IP
 
-9. Enumerating all information
+8. Enumerating all information
 
           enum4linux IP
+
+## EXPLOITING RDP Service - Port 3389
+
+Remote Desktop Protocol 
+
+Protocol used for remotely accessing the computers
+
+## How to Exploit?
+
+1. Check for running services on the target and confirm if RDP is running on any open port
+2. use Metasploit to confirm the services running is RDP
+3. use hydra to brute force the login credentials
+4. Use and RDP tools to login into the victim's machine
+
+## Enumeration
+
+1. Find Information
+
+        sudo nmap -A -sV -sC IP
+
+2. Confirm Port Running RDP Service
