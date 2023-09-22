@@ -121,7 +121,7 @@ Request services from server programs in a computer network
 
           enum4linux IP
 
-# EXPLOITING RDP Service - Port 3389
+# RDP Service - Port 3389
 
 Remote Desktop Protocol 
 
