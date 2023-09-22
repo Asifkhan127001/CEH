@@ -63,7 +63,7 @@ SNMP Protocol is used to monitor and manage Network Devices like PCs, Router, Pr
 
          sudo nmap --script=snmp-interfaces IP
 
-## SMB Enumeration - Port 445
+# SMB Enumeration - Port 445
 server message Block
 
 Network file sharing Protocol that allows applications on a Computer to red and write to file. 
@@ -121,7 +121,7 @@ Request services from server programs in a computer network
 
           enum4linux IP
 
-## EXPLOITING RDP Service - Port 3389
+# EXPLOITING RDP Service - Port 3389
 
 Remote Desktop Protocol 
 
@@ -141,3 +141,33 @@ Protocol used for remotely accessing the computers
         sudo nmap -A -sV -sC IP
 
 2. Confirm Port Running RDP Service
+
+        auxiliary/scanner/rdp/rdp_scanner
+
+3. Bruteforce RDP Login Credentials
+
+        hydra -L User.txt -P password.txt rdp://10.10.22.34 -s 3333
+
+4. RDP Login in linux Using Xfreerdp
+
+        xfreerdp /u:username /p:password /v:10.10.22.34:3333
+
+# NetBIOS Enumeration - Port 137/138/139
+
+1. NBName: 137/UDP
+2. NBName: 137/TCP
+3. NBDatagram: 138/UDP
+4. NBSession: 139/TCP
+
+Network Basic Input Output System,
+Facilitates and allows computer to connect over the local network, access shared resources, such as file and printers, and to file each other.
+
+## Enumeration 
+
+1. Find Information
+
+       sudo nmap -p137,138,139 -A -sV -sC IP
+
+2. use nmap script find flag
+
+       sudo nmap -p137,138,139 --script nbstat.nse IP
